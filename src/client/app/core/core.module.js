@@ -4,6 +4,7 @@
   angular.module('app.core',[
       //Angular Modules
       //Componentes reutilizables
+      'app.data',
       'blocks.exception',
       'blocks.logger',
       'blocks.router',
