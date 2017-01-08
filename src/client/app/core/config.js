@@ -6,8 +6,8 @@
   core.config(toastrConfig);
 
   function toastrConfig(toastr) {
-    toastr.option.timeOut = 4000;
-    toastr.option.positionClass = 'toast-bottom-right';
+    toastr.options.timeOut = 4000;
+    toastr.options.positionClass = 'toast-bottom-right';
   }
 
   var config = {
@@ -18,10 +18,13 @@
 
   core.value('config', config);
 
-  core.config(configure);
+  core.config(routerConfig);
 
-  function configure($logProvider, $urlRouterProvider, $stateProvider, 
-                      routeHelperConfigProvider, exceptionHandlerProvider) {
+  function routerConfig($logProvider, 
+        $urlRouterProvider, 
+        $stateProvider,
+        routeHelperConfigProvider, 
+        exceptionHandlerProvider) {
     
     //Activa o desactiva el debuggin
     if($logProvider.debugEnable){

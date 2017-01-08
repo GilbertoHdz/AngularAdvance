@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="app">
 <head>
   <meta charset="UTF-8">
-  <title >Avengers</title>
+  <title ng-bind="title"></title>  <!-- esta en el routeScope-->
 
   <link rel="stylesheet" href="content/css/bootstrap.min.css"/>
   <link rel="stylesheet" href="content/css/customtheme.css"/>
@@ -10,11 +10,8 @@
   <link rel="stylesheet" href="content/css/toastr.min.css"/>
 </head>
 <body>
-    
-    <div class="container">
-      <h1>Avengers App</h1>
-      {{1+1}}
-    </div>
+  
+  <div ng-include="'app/layout/shell.html'"></div>
 
   <!-- vendor-->
   <script src="scripts/jquery-2.1.4.min.js"></script>
@@ -29,7 +26,28 @@
   <!-- GeoFire -->
   <!-- Lo-Dash -->
   <!--socket.io-->
-  <!--modulo principal-->
 
+  <!--modulo principal-->
+  <script src="app/app.module.js"></script>
+
+  <script src="app/blocks/logger/logger.module.js"></script>
+  <script src="app/blocks/logger/logger.js"></script>
+  <script src="app/blocks/exception/exception.module.js"></script>
+  <script src="app/blocks/exception/exception-handler.provider.js"></script>
+  <script src="app/blocks/exception/exception.js"></script>
+  <script src="app/blocks/router/router.module.js"></script>
+  <script src="app/blocks/router/routehelper.js"></script>
+
+  <script src="app/core/core.module.js"></script>
+  <script src="app/core/constants.js"></script>
+  <script src="app/core/config.js"></script>
+
+  <script src="app/data/dataservice.module.js"></script>
+  <script src="app/data/dataservice.js"></script>
+
+  <script src="app/layout/layout.module.js"></script>
+  <script src="app/layout/shell.js"></script>
+  <script src="app/layout/sidebar.js"></script>
+  
 </body>
 </html>

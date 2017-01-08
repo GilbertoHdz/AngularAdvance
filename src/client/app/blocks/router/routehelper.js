@@ -6,7 +6,7 @@
     .provider('routehelperConfig', routehelperConfig)
     .factory('routehelper', routehelper);
 
-  router.$inject = ['$location', '$rootScope', 'logger', 'routehelperConfig'];
+  routehelper.$inject = ['$location', '$rootScope', '$state', 'logger', 'routehelperConfig'];
 
   function routehelperConfig() {
     this.config = {
@@ -71,9 +71,10 @@
           var title = routehelperConfig.config.docTitle 
                         + ' ' + (toState.title || '');
           $rootScope.title = title; //data bind hacia <title>
-        });
+        }
+      );
     }
-
+    
   }
 
 }());

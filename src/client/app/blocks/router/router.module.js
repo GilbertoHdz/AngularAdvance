@@ -1,10 +1,8 @@
 (function () {
   'use strict';
 
-  angular
-    .module('blocks.router'),
-      [
-        'ui.router',
-        'blocks.logger'
-      ]
+  angular.module('blocks.router', [
+      'blocks.logger'
+    ]);
+
 }());
